@@ -5,7 +5,8 @@ void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget { //değişmeyecek yapılar stateless widgetta olur.
+class MyApp extends StatelessWidget {
+  //değişmeyecek yapılar stateless widgetta olur.
   const MyApp({super.key});
 
   @override
@@ -13,14 +14,21 @@ class MyApp extends StatelessWidget { //değişmeyecek yapılar stateless widget
     debugPrint("MyApp build methodu çalıştu");
     return MaterialApp(
       title: "My Counter App",
-      theme: ThemeData(primarySwatch: Colors.teal),
+      theme: ThemeData(
+        primarySwatch: Colors.teal,
+        textTheme: TextTheme(
+          headline1:
+              TextStyle(color: Colors.purple, fontWeight: FontWeight.bold),
+        ),
+      ),
       home: MyHomePage(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget { //değişecek işlemleri stateful widgetta yapılır.
-  
+class MyHomePage extends StatefulWidget {
+  //değişecek işlemleri stateful widgetta yapılır.
+
   const MyHomePage({super.key});
 
   @override
@@ -47,7 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Text(
               _sayac.toString(),
-              style: TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
+              style: Theme.of(context).textTheme.headline1,
             )
           ],
         ),
@@ -63,7 +71,8 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void sayaciArttir() {
-    setState(() {}); //set state ile hotreload yapmadan değeri ekrana yazdırabiliyoruz.
+    setState(
+        () {}); //set state ile hotreload yapmadan değeri ekrana yazdırabiliyoruz.
     _sayac++;
   }
 }
