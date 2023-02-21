@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_temel_widgets/image_widgets.dart';
 import 'package:flutter_temel_widgets/my_counter_page.dart';
+import 'package:flutter_temel_widgets/temel_button_turleri.dart';
 
 void main() {
   debugPrint("main methodu çalıştu");
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "My Counter App",
       theme: ThemeData(
-        primarySwatch: Colors.teal,
+        primarySwatch: Colors.purple,
         textTheme: TextTheme(
           headline1:
               TextStyle(color: Colors.purple, fontWeight: FontWeight.bold),
@@ -25,9 +26,9 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Image Örnekleri"),
+          title: Text("Button Örnekleri"),
         ),
-        body: ImageOrnekleri(),
+        body: TemelButonlar(),
       ),
     );
   }
