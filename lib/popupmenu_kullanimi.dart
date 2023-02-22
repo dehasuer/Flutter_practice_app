@@ -9,7 +9,7 @@ class PopupMenuKullanimi extends StatefulWidget {
 
 class _PopupMenuKullanimiState extends State<PopupMenuKullanimi> {
   String _secilenSehir = "Bursa";
-  List<String> renkler = ["Mavi", "Kırmızı", "Sarı", "Yeşil"];
+  List<String> renkler = ["Mavi", "Kırmızı", "Sarı", "Yeşil", "Turuncu"];
   @override
   Widget build(BuildContext context) {
     return Center(
